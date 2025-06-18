@@ -1,0 +1,229 @@
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+/* General Theme */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #264d3c;
+  padding: 0 1rem;
+}
+
+.top-design-bar {
+  width: 100vw; /* Full width of the viewport */
+  height: 10px; /* Thin height */
+  background-color: #264d3c; /* Same color as your text */
+  margin-left: -1rem; /* Cancel out the body's side padding */
+  margin-right: -1rem;
+}
+/* Greeting Section */
+.greeting-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+}
+
+.greeting-text h1 {
+  font-size: 3.2rem; /* Increased from 3rem */
+  margin: 0.8rem 0;
+  line-height: 1.2;
+  font-weight: 850;
+}
+
+.greeting-text h4 {
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #264d3c;
+}
+
+.greeting-text p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.greeting-image img {
+  width: 100%;
+  max-width: 700px; /* increase this as needed */
+  height: auto;
+  display: block;
+  margin-top: -2rem;
+}
+
+.polaroid-letter {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 600px; /* Increase this for a bigger letter */
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.polaroid-letter img {
+  width: 100%; /* Ensures it stretches to container size */
+  border-radius: 8px;
+}
+
+.polaroid-letter .caption {
+  font-size: 1.3rem;
+  color: #264d3c;
+  margin-top: 0.7rem;
+  font-style: 'Montserrat';
+  font-weight: 600;
+}
+/* Letters Section */
+.letters-section {
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 1.3rem;
+}
+
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f2f2f2;
+  transition: background 0.3s;
+  font-size: 1.3rem;
+}
+
+.tag[data-tag="sad"] { background: #f9d5d3; color: #b83232; }
+.tag[data-tag="happy"] { background: #fcecc9; color: #c06c00; }
+.tag[data-tag="tired"] { background: #d4e4f4; color: #375a7f; }
+.tag[data-tag="insecure"] { background: #e0d9f4; color: #5e3a90; }
+
+.messages-grid {
+  display: grid;
+  gap: 5rem;
+  margin-top: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.message-card {
+  padding: 2rem;
+  border-radius: 20px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 10s ease;
+  display: none;
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+
+.message-card.show {
+  display: block;
+  opacity: 8;
+  transform: translateY(0);
+  font-size: 1rem;
+}
+
+.tag-label {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+}
+
+.tag-label.love { background: #f9d5d3; color: #b83232; }
+.tag-label.health { background: #fcecc9; color: #c06c00; }
+.tag-label.career { background: #d4e4f4; color: #375a7f; }
+.tag-label.you { background: #e0d9f4; color: #5e3a90; }
+
+/* Music Section */
+.music-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.video-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+  max-width: 150%;
+  width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 5rem;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.play-button:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.video-caption {
+  margin-top: 1rem;
+  color: #264d3c;
+  font-style: italic;
+}
+/* Responsive */
+@media (min-width: 768px) {
+  .greeting-section {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .greeting-text {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .greeting-text h1 {
+    font-size: 5rem;
+  }
+
+  .greeting-image img {
+    max-width: 340px;
+  }
+}
